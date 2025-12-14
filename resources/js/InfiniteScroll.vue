@@ -20,7 +20,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 export default {
-  name: 'LdInfiniteScroll',
+  name: 'SbInfiniteScroll',
   props: {
     loading: { type: Boolean, default: false },
     noMore: { type: Boolean, default: false },

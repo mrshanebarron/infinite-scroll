@@ -13,6 +13,6 @@ class infinite-scroll extends Component
 
     public function render()
     {
-        return view('ld-infinite-scroll::components.infinite-scroll');
+        return view('sb-infinite-scroll::components.infinite-scroll');
     }
 }

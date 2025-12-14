@@ -1,5 +1,5 @@
 <?php
 
 return [
-    // Default settings for ld-infinite-scroll
+    // Default settings for sb-infinite-scroll
 ];

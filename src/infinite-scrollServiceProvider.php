@@ -11,14 +11,14 @@ class infinite-scrollServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/ld-infinite-scroll.php', 'ld-infinite-scroll');
+        $this->mergeConfigFrom(__DIR__ . '/../config/sb-infinite-scroll.php', 'sb-infinite-scroll');
     }
 
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ld-infinite-scroll');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sb-infinite-scroll');
 
-        Livewire::component('ld-infinite-scroll', infinite-scroll::class);
+        Livewire::component('sb-infinite-scroll', infinite-scroll::class);
 
         $this->loadViewComponentsAs('ld', [
             Bladeinfinite-scroll::class,
@@ -26,12 +26,12 @@ class infinite-scrollServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/ld-infinite-scroll.php' => config_path('ld-infinite-scroll.php'),
-            ], 'ld-infinite-scroll-config');
+                __DIR__ . '/../config/sb-infinite-scroll.php' => config_path('sb-infinite-scroll.php'),
+            ], 'sb-infinite-scroll-config');
 
             $this->publishes([
-                __DIR__ . '/../resources/views' => resource_path('views/vendor/ld-infinite-scroll'),
-            ], 'ld-infinite-scroll-views');
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/sb-infinite-scroll'),
+            ], 'sb-infinite-scroll-views');
         }
     }
 }

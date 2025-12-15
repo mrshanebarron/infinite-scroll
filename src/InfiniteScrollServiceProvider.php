@@ -1,13 +1,13 @@
 <?php
 
-namespace MrShaneBarron\infinite-scroll;
+namespace MrShaneBarron\InfiniteScroll;
 
 use Illuminate\Support\ServiceProvider;
-use MrShaneBarron\infinite-scroll\Livewire\infinite-scroll;
-use MrShaneBarron\infinite-scroll\View\Components\infinite-scroll as Bladeinfinite-scroll;
+use MrShaneBarron\InfiniteScroll\Livewire\InfiniteScroll;
+use MrShaneBarron\InfiniteScroll\View\Components\infinite-scroll as BladeInfiniteScroll;
 use Livewire\Livewire;
 
-class infinite-scrollServiceProvider extends ServiceProvider
+class InfiniteScrollServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
@@ -21,7 +21,7 @@ class infinite-scrollServiceProvider extends ServiceProvider
         Livewire::component('sb-infinite-scroll', infinite-scroll::class);
 
         $this->loadViewComponentsAs('ld', [
-            Bladeinfinite-scroll::class,
+            BladeInfiniteScroll::class,
         ]);
 
         if ($this->app->runningInConsole()) {

@@ -4,8 +4,7 @@ namespace MrShaneBarron\InfiniteScroll;
 
 use Illuminate\Support\ServiceProvider;
 use MrShaneBarron\InfiniteScroll\Livewire\InfiniteScroll;
-use MrShaneBarron\InfiniteScroll\View\Components\infinite-scroll as BladeInfiniteScroll;
-use Livewire\Livewire;
+use MrShaneBarron\InfiniteScroll\View\Components\InfiniteScroll as BladeInfiniteScroll;
 
 class InfiniteScrollServiceProvider extends ServiceProvider
 {
@@ -18,7 +17,9 @@ class InfiniteScrollServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sb-infinite-scroll');
 
-        Livewire::component('sb-infinite-scroll', infinite-scroll::class);
+        if (class_exists(\Livewire\Livewire::class)) {
+            \Livewire\Livewire::component('sb-infinite-scroll', InfiniteScroll::class);
+        }
 
         $this->loadViewComponentsAs('ld', [
             BladeInfiniteScroll::class,

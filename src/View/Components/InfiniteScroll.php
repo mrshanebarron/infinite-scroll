@@ -1,10 +1,10 @@
 <?php
 
-namespace MrShaneBarron\infinite-scroll\View\Components;
+namespace MrShaneBarron\InfiniteScroll\View\Components;
 
 use Illuminate\View\Component;
 
-class infinite-scroll extends Component
+class InfiniteScroll extends Component
 {
     public function __construct()
     {
